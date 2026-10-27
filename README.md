@@ -11,6 +11,7 @@ git pull        # en début de séance, pour récupérer les nouveaux exemples
 | Dossier | Séance |
 |---|---|
 | `S1/` | Snake procédural |
+| `S2/` | Objets et boids |
 
 Un fichier se lance avec `uv run fichier.py` (ou `python fichier.py`). Devinez ce qu'il affiche **avant** de le lancer.
 
