@@ -10,7 +10,7 @@ class Window:
         pass
 
 
-def run(window, fps=2, seconds=2):
+def run(window, fps=2, seconds=3):
     for _ in range(fps * seconds):
         time.sleep(1 / fps)
         window.on_update(1 / fps)

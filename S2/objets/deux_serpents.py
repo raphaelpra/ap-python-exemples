@@ -15,8 +15,8 @@ def move(snake, direction):
     snake.pop(0)
 
 
-snake1, direction1 = [(1, 5), (2, 5)], RIGHT
-snake2, direction2 = [(9, 7), (8, 7)], LEFT
+snake1, direction1 = [(1, 2), (2, 2)], RIGHT
+snake2, direction2 = [(9, 4), (8, 4)], LEFT
 
 move(snake1, direction1)
 move(snake2, direction1)  # ⚠️ oups : la direction de l'autre serpent

@@ -36,5 +36,5 @@ class MyWindow(Window):
 
 
 print("avant run")
-run(MyWindow())
+run(MyWindow())  # ici, on donne la fenêtre à run ; arcade.run(), lui, la retrouve seul
 print("après run")

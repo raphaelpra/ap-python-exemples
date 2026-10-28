@@ -5,8 +5,8 @@ class Snake:
         self.body.append(tile)
 
 
-a = Snake()
-b = Snake()
-a.grow((1, 1))
-print(f"{a.body=}")
-print(f"{b.body=}")
+snake1 = Snake()
+snake2 = Snake()
+snake1.grow((1, 1))
+print(f"{snake1.body=}")
+print(f"{snake2.body=}")

@@ -6,7 +6,7 @@ class Snake:
         self.body.append(tile)
 
 
-s = Snake([(1, 1)])
+snake1 = Snake([(1, 1)])
 print("créé")
-s.grow((2, 1))
-print(s.body)
+snake1.grow((2, 1))
+print(snake1.body)

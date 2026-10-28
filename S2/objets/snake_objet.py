@@ -1,5 +1,6 @@
 # ⌨️ À vous : le serpent de T1, rangé dans une classe.
-# Complétez les méthodes marquées « à écrire », puis : uv run snake_objet.py
+# Écrivez grow, puis complétez les trois méthodes marquées « à écrire », puis :
+#     uv run snake_objet.py
 # Tout est juste quand le programme affiche OK.
 
 UP, DOWN, LEFT, RIGHT = (0, -1), (0, 1), (-1, 0), (1, 0)
@@ -13,6 +14,9 @@ class Snake:
     def head(self):
         """La case de la tête."""
         return self.body[-1]
+
+    # à écrire, en entier : la méthode grow, qui reçoit une case (tile) et
+    # l'ajoute côté tête, si bien que le serpent s'allonge d'une case
 
     def next_head(self):
         """La case où arrivera la tête, sans rien modifier."""
@@ -29,23 +33,27 @@ class Snake:
 
 # --- les vérifications ---------------------------------------------------------
 
-s = Snake([(10, 15), (11, 15), (12, 15)], RIGHT)
-assert s.head() == (12, 15)
-assert s.next_head() == (13, 15), "next_head"
-assert s.body == [(10, 15), (11, 15), (12, 15)], "next_head ne doit rien modifier"
+short = Snake([(1, 1)], RIGHT)
+short.grow((2, 1))
+assert short.body == [(1, 1), (2, 1)], "grow"
 
-s.move()
-assert s.body == [(11, 15), (12, 15), (13, 15)], "move"
+snake1 = Snake([(10, 15), (11, 15), (12, 15)], RIGHT)
+assert snake1.head() == (12, 15)
+assert snake1.next_head() == (13, 15), "next_head"
+assert snake1.body == [(10, 15), (11, 15), (12, 15)], "next_head ne doit rien modifier"
 
-s.turn(LEFT)
-assert s.direction == RIGHT, "pas de demi-tour"
-s.turn(UP)
-assert s.direction == UP, "turn"
+snake1.move()
+assert snake1.body == [(11, 15), (12, 15), (13, 15)], "move"
+
+snake1.turn(LEFT)
+assert snake1.direction == RIGHT, "pas de demi-tour"
+snake1.turn(UP)
+assert snake1.direction == UP, "turn"
 
 # deux serpents, chacun ses données : plus de mélange possible
-other = Snake([(0, 0), (1, 0)], RIGHT)
-other.move()
-assert other.body == [(1, 0), (2, 0)]
-assert s.body == [(11, 15), (12, 15), (13, 15)], "s n'a pas bougé"
+snake2 = Snake([(0, 0), (1, 0)], RIGHT)
+snake2.move()
+assert snake2.body == [(1, 0), (2, 0)]
+assert snake1.body == [(11, 15), (12, 15), (13, 15)], "snake1 n'a pas bougé"
 
 print("OK")
