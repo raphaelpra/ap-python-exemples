@@ -1,0 +1,11 @@
+[project]
+name = "ap-python-exemples-s2"
+version = "0.1.0"
+description = "AP – Python : les exemples de S2"
+requires-python = ">=3.12"
+# arcade sert au TP 2 : l'installer ici, en début de séance, remplit le cache
+# de uv, et le `uv add arcade` du TP n'a plus rien à télécharger.
+dependencies = ["arcade>=3.3.3"]
+
+[tool.uv]
+package = false
