@@ -1,7 +1,6 @@
 # Une « bibliothèque de jeu » en quelques lignes : c'est elle qui a la boucle.
 import time
 
-
 # --- ce que fournit la bibliothèque --------------------------------------------
 
 
